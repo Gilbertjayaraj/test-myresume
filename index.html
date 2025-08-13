@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gilbert Jayaraj — Resume</title>
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --muted:#6b7280; --accent:#b91c1c;
+      --text:#111827; --glass: rgba(255,255,255,0.6);
+    }
+    [data-theme="dark"]{
+      --bg:#0b1220; --card:#0f1724; --muted:#9aa4b2; --accent:#ff6b6b;
+      --text:#e6eef6; --glass: rgba(255,255,255,0.03);
+    }
+
+    html,body{height:100%; margin:0; font-family:Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;}
+    body{background:linear-gradient(180deg,var(--bg),#fff); color:var(--text); padding:28px; -webkit-font-smoothing:antialiased;}
+    .container{max-width:900px; margin:0 auto;}
+    .card{background:var(--card); border-radius:14px; box-shadow:0 6px 30px rgba(15,23,42,0.08); padding:28px; display:grid; grid-template-columns: 1fr 320px; gap:20px;}
+    header{display:flex; align-items:flex-start; gap:16px;}
+    .avatar{
+      width:86px; height:86px; border-radius:12px; background:linear-gradient(180deg,var(--accent),#7f1d1d); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:28px;
+      flex-shrink:0;
+    }
+    h1{margin:0; font-size:22px; letter-spacing:0.2px;}
+    .title { color:var(--muted); margin-top:6px; font-size:13px; }
+    .contact a{display:inline-block; color:var(--muted); text-decoration:none; margin-right:10px; font-size:13px;}
+    .section{margin-top:18px;}
+    .section h3{margin:0 0 8px 0; font-size:14px; color:var(--accent);}
+    .sidebar{padding:12px; background:var(--glass); border-radius:10px; height:fit-content;}
+    ul{margin:0; padding-left:18px;}
+    .skill-list{display:flex; flex-wrap:wrap; gap:8px;}
+    .skill-pill{background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted);}
+    .edu-item, .proj-item{margin-bottom:12px;}
+    .objective{font-size:14px; color:var(--muted); line-height:1.5;}
+    .controls{display:flex; gap:8px; justify-content:flex-end; margin-bottom:14px; align-items:center;}
+    button{border:0; padding:8px 10px; border-radius:8px; cursor:pointer; background:var(--accent); color:white; font-weight:600;}
+    .ghost{background:transparent; border:1px solid rgba(0,0,0,0.06); color:var(--text); font-weight:600;}
+    footer{margin-top:18px; text-align:center; color:var(--muted); font-size:13px;}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .card{grid-template-columns: 1fr; padding:18px;}
+      .sidebar{order:-1}
+      .controls{justify-content:space-between;}
+    }
+
+    /* Print */
+    @media print{
+      body{padding:0;}
+      .controls, .theme-toggle {display:none !important;}
+      .card{box-shadow:none; background:white; grid-template-columns:1fr 280px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <div class="theme-toggle" style="display:flex;gap:8px;align-items:center;">
+        <label style="font-size:13px;color:var(--muted)">Theme</label>
+        <button id="toggleTheme" class="ghost">Toggle</button>
+      </div>
+      <div>
+        <button id="printBtn">Download PDF</button>
+      </div>
+    </div>
+
+    <main class="card" id="resumeCard" role="main" aria-labelledby="nameHeading">
+      <section>
+        <header>
+          <div class="avatar" aria-hidden="true">GJ</div>
+          <div>
+            <h1 id="nameHeading">Gilbert Jayaraj</h1>
+            <div class="title">Bachelor of Computer Science — Cyber Security</div>
+            <div style="height:8px"></div>
+            <div class="contact" style="font-size:13px">
+              <a href="mailto:gilbertjayaraj3@gmail.com">gilbertjayaraj3@gmail.com</a> ·
+              <a href="tel:7305890090">+91 7305890090</a> · Chennai
+            </div>
+          </div>
+        </header>
+
+        <div class="section">
+          <h3>Objective</h3>
+          <p class="objective">
+            I would like to be an integral part of an organisation which has a vision for the company and its people.
+            I aim to enhance my skills and contribute to company goals while growing professionally. (Source: CV)
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <strong>Bachelor of Computer Science — Cyber Security</strong><br/>
+            Bharath Institute of Higher Education and Research (2020 – 2023)
+          </div>
+          <div class="edu-item">
+            <strong>12th — Computer Science & Maths</strong><br/>
+            Municipal Higher Secondary School (2018 – 2020)
+          </div>
+          <div class="edu-item">
+            <strong>SSLC</strong><br/>
+            Infant Jesus Matric School (2018)
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Projects</h3>
+          <div class="proj-item">
+            <strong>Scavenger Security Tool Kit — Team Leader (2023)</strong>
+            <p class="objective" style="margin:6px 0 0 0;">
+              Led development of a multifunctional security toolkit for detecting & reporting cyber threats. Built core features in Python,
+              integrated network scanning, password protection and vulnerability assessment; deployed on cloud infrastructure and collaborated with a team of four.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Certificates</h3>
+          <ul>
+            <li>Apply End-to-End Security to a Cloud Application — Cognitive Class</li>
+            <li>SQL and Relational Databases 101 — Cognitive Class</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Awards</h3>
+          <ul>
+            <li>Won the District-level Badminton tournament.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <strong style="font-size:15px">Profile</strong>
+          <small style="color:var(--muted);font-size:12px">Fresher</small>
+        </div>
+
+        <div class="section">
+          <h3>Technical Skills</h3>
+          <div class="skill-list" style="margin-top:8px">
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Cloud Security</span>
+            <span class="skill-pill">Microsoft Office</span>
+            <span class="skill-pill">Google Workspace</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Soft Skills</h3>
+          <ul style="color:var(--muted); font-size:14px; margin-top:6px;">
+            <li>Time Management</li>
+            <li>Willingness to Learn</li>
+            <li>Adaptability</li>
+            <li>Logical & Critical Thinking</li>
+            <li>Problem Solving & Communication</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Interests</h3>
+          <ul style="color:var(--muted); font-size:14px; margin-top:6px;">
+            <li>Bug bounty programs</li>
+            <li>Network & cloud security</li>
+            <li>Badminton</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Languages</h3>
+          <ul style="color:var(--muted); font-size:14px; margin-top:6px;">
+            <li>English</li>
+            <li>Tamil</li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      This resume was created from your uploaded CV. :contentReference[oaicite:1]{index=1}
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') document.documentElement.setAttribute('data-theme','dark');
+
+    document.getElementById('toggleTheme').addEventListener('click', () => {
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      } else {
+        document.documentElement.setAttribute('data-theme','dark');
+        localStorage.setItem('theme','dark');
+      }
+    });
+
+    // Print button
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+  </script>
+</body>
+</html>
