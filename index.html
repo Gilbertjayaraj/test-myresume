@@ -14,36 +14,78 @@
       --text:#e6eef6; --glass: rgba(255,255,255,0.03);
     }
 
-    html,body{height:100%; margin:0; font-family:Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;}
-    body{background:linear-gradient(180deg,var(--bg),#fff); color:var(--text); padding:28px; -webkit-font-smoothing:antialiased;}
+    html,body{
+      height:100%; margin:0; font-family:Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    body{
+      background:linear-gradient(180deg,var(--bg),#fff); 
+      color:var(--text); 
+      padding:28px; 
+      -webkit-font-smoothing:antialiased;
+    }
     .container{max-width:900px; margin:0 auto;}
-    .card{background:var(--card); border-radius:14px; box-shadow:0 6px 30px rgba(15,23,42,0.08); padding:28px; display:grid; grid-template-columns: 1fr 320px; gap:20px;}
-    header{display:flex; align-items:flex-start; gap:16px;}
+    .card{
+      background:var(--card); border-radius:14px; 
+      box-shadow:0 6px 30px rgba(15,23,42,0.08); 
+      padding:28px; 
+      display:grid; grid-template-columns: 1fr 320px; gap:20px;
+    }
+    header{display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;}
     .avatar{
-      width:86px; height:86px; border-radius:12px; background:linear-gradient(180deg,var(--accent),#7f1d1d); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:28px;
-      flex-shrink:0;
+      width:86px; height:86px; border-radius:12px; 
+      background:linear-gradient(180deg,var(--accent),#7f1d1d); 
+      display:flex; align-items:center; justify-content:center; 
+      color:white; font-weight:700; font-size:28px; flex-shrink:0;
     }
     h1{margin:0; font-size:22px; letter-spacing:0.2px;}
     .title { color:var(--muted); margin-top:6px; font-size:13px; }
-    .contact a{display:inline-block; color:var(--muted); text-decoration:none; margin-right:10px; font-size:13px;}
+    .contact a{
+      display:inline-block; color:var(--muted); text-decoration:none; 
+      margin-right:10px; font-size:13px;
+      word-break:break-word;
+    }
     .section{margin-top:18px;}
     .section h3{margin:0 0 8px 0; font-size:14px; color:var(--accent);}
     .sidebar{padding:12px; background:var(--glass); border-radius:10px; height:fit-content;}
     ul{margin:0; padding-left:18px;}
     .skill-list{display:flex; flex-wrap:wrap; gap:8px;}
-    .skill-pill{background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted);}
+    .skill-pill{
+      background:transparent; border:1px solid rgba(0,0,0,0.06); 
+      padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted);
+    }
     .edu-item, .proj-item{margin-bottom:12px;}
     .objective{font-size:14px; color:var(--muted); line-height:1.5;}
-    .controls{display:flex; gap:8px; justify-content:flex-end; margin-bottom:14px; align-items:center;}
-    button{border:0; padding:8px 10px; border-radius:8px; cursor:pointer; background:var(--accent); color:white; font-weight:600;}
-    .ghost{background:transparent; border:1px solid rgba(0,0,0,0.06); color:var(--text); font-weight:600;}
+    .controls{
+      display:flex; gap:8px; justify-content:flex-end; 
+      margin-bottom:14px; align-items:center; flex-wrap:wrap;
+    }
+    button{
+      border:0; padding:10px 14px; border-radius:8px; cursor:pointer; 
+      background:var(--accent); color:white; font-weight:600; font-size:14px;
+    }
+    .ghost{
+      background:transparent; border:1px solid rgba(0,0,0,0.06); 
+      color:var(--text); font-weight:600;
+    }
     footer{margin-top:18px; text-align:center; color:var(--muted); font-size:13px;}
 
     /* Responsive */
     @media (max-width:880px){
+      body{padding:16px;}
       .card{grid-template-columns: 1fr; padding:18px;}
-      .sidebar{order:-1}
+      .sidebar{order:-1; margin-bottom:16px;}
       .controls{justify-content:space-between;}
+      header{flex-direction:column; align-items:flex-start;}
+      .avatar{width:70px; height:70px; font-size:22px;}
+      h1{font-size:20px;}
+    }
+
+    /* Small mobile screens */
+    @media (max-width:480px){
+      body{padding:12px;}
+      button{width:100%; text-align:center;}
+      .contact a{display:block; margin-bottom:4px;}
+      .skill-list{flex-direction:column;}
     }
 
     /* Print */
@@ -85,7 +127,7 @@
           <h3>Objective</h3>
           <p class="objective">
             I would like to be an integral part of an organisation which has a vision for the company and its people.
-            I aim to enhance my skills and contribute to company goals while growing professionally. (Source: CV)
+            I aim to enhance my skills and contribute to company goals while growing professionally.
           </p>
         </div>
 
@@ -185,7 +227,7 @@
     </main>
 
     <footer>
-      This resume was created from your uploaded CV. :contentReference[oaicite:1]{index=1}
+      This resume was created from your uploaded CV.
     </footer>
   </div>
 
